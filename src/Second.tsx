@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import JsonTable from './Components/JsonTable';
 import MainComponent from './Components/MainComponent';
 import { useNavigate } from 'react-router-dom';
-function App() {
+function Second() {
   const navigation = useNavigate();
   useEffect(() => {
     const form = localStorage.getItem('form');
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default Second;

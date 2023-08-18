@@ -29,7 +29,7 @@ export default function Form() {
 
     evt.preventDefault();
     localStorage.setItem('form',JSON.stringify(form));
-    navigation('/main');
+    navigation('/second');
   }
 
 
