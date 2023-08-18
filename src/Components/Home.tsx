@@ -1,24 +1,39 @@
-import { Box, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Form from "./Form";
 
 export default function Home(){
 
 
 
-    return  (
+    return (
+      <Box
+        sx={{
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: '#4ade80',
+          padding:'20px',
+        }}
+      >
+        <Typography sx={{
+          backgroundColor:'white',
+          padding:'10px',
+          textAlign:'center',
+          fontWeight:'bold',
+
+
+        }} variant="h2">GrowMeOrganic Assessment</Typography>
         <Box
-      sx={{
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: 'primary.dark',
-        display:'grid',
-        justifyContent:'center',
-        alignItems:'center',
-      }}
-    >
-        <Form/>
+          sx={{
+            backgroundColor: '#4ade80',
+            padding: '2em',
+            display: 'flex',
+            marginTop:'20px',
+          }}
+        >
+          <Form />
         </Box>
-    )
+      </Box>
+    );
     
     
 
