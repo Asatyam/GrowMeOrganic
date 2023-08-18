@@ -1,18 +1,12 @@
-
-import Home from "./Components/Home"
-import JsonTable from "./Components/JsonTable"
-import MainComponent from "./Components/MainComponent"
+import JsonTable from './Components/JsonTable';
+import MainComponent from './Components/MainComponent';
 function App() {
-
   return (
     <>
-    {/* <Home/> */}
-    <JsonTable/>
-    <MainComponent/>
+      <JsonTable />
+      <MainComponent />
     </>
-    )
-    
-
+  );
 }
 
-export default App
+export default App;
