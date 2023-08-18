@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, Typography } from '@mui/material';
 import { ChangeEvent, useState } from 'react';
 import CustomTextField from './CustomTextField';
+import { useNavigate } from 'react-router-dom';
 
 export interface FormInput {
   name: string;
@@ -23,11 +24,12 @@ export default function Form() {
     console.log(form)
   };
 
+  const navigation  = useNavigate();
   const handleSubmit = (evt:React.FormEvent<HTMLFormElement>)=>{
 
     evt.preventDefault();
     localStorage.setItem('form',JSON.stringify(form));
-
+    navigation('/main');
   }
 
 

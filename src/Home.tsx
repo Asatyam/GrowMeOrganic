@@ -1,7 +1,23 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Typography,Alert,AlertTitle } from '@mui/material';
 import Form from './Components/Form';
+import { useSearchParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+
+  const [searchParams] = useSearchParams();
+  const [showMessage,setShowMessage] = useState<boolean>(false);
+
+  useEffect(()=>{
+
+    const loggedIn = searchParams.get('login');
+    if (loggedIn==='false'){
+      setShowMessage(true);
+    }
+
+  },[setShowMessage,searchParams])
+
+
   return (
     <Box
       sx={{
@@ -22,6 +38,17 @@ export default function Home() {
       >
         GrowMeOrganic Assessment
       </Typography>
+      {showMessage && (
+        <Alert severity="error"
+        sx = {{
+          margin:'10px auto',
+          width:'fit-content',
+          
+        }}>
+          <AlertTitle>Error</AlertTitle>
+          You must submit the form to continue further
+        </Alert>
+      )}
       <Box
         sx={{
           backgroundColor: '#4ade80',
