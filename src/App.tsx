@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     const form = localStorage.getItem('form');
     if (!form) {
-      navigation('/?login=false');
+      navigation('/?login=false/');
     }
   });
   return (
