@@ -38,22 +38,22 @@ export default function JsonTable(){
       >
         <DataGrid
           rowSpacingType="border"
-          rowHeight={100}
+          getRowHeight={()=>'auto'}
           sx={{
             '&.MuiDataGrid-root--densityStandard .MuiDataGrid-cell': {
               py: '15px',
             },
             boxShadow: 2,
             backgroundColor: '#7dd3fc',
-            fontSize: '1rem',
+            fontSize: '0.8rem',
             border: 2,
             borderColor: 'primary.light',
           }}
           columns={[
-            { field: 'userId', },
-            { field: 'id', },
-            { field: 'title',  },
-            { field: 'body', },
+            { field: 'userId',flex:0.3},
+            { field: 'id',flex:0.3 },
+            { field: 'title', flex:0.5 },
+            { field: 'body',flex:1 },
           ]}
           rows={posts}
           initialState={{
