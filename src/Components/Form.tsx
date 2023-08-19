@@ -48,9 +48,9 @@ export default function Form() {
         <FormControl
           sx={{
             width: '100%',
-            padding: '30px',
+            padding: '1em',
             display: 'grid',
-            gap: '25px',
+            gap: '1.5em',
           }}
         >
           <Typography variant="h4" sx={{border:'2px solid black',textAlign:'center',padding:'4px'}} component="h3">

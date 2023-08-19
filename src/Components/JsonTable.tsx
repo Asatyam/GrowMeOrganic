@@ -35,13 +35,10 @@ export default function JsonTable(){
 
     return (
       <Box
-        sx={{
-          padding: '2em',
-        }}
       >
         <DataGrid
           rowSpacingType="border"
-          getRowHeight={() => 'auto'}
+          rowHeight={100}
           sx={{
             '&.MuiDataGrid-root--densityStandard .MuiDataGrid-cell': {
               py: '15px',
@@ -53,10 +50,10 @@ export default function JsonTable(){
             borderColor: 'primary.light',
           }}
           columns={[
-            { field: 'userId', flex: 0.3 },
-            { field: 'id', flex: 0.3 },
-            { field: 'title', flex: 1 },
-            { field: 'body', flex: 2 },
+            { field: 'userId', },
+            { field: 'id', },
+            { field: 'title',  },
+            { field: 'body', },
           ]}
           rows={posts}
           initialState={{
